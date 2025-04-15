@@ -15,7 +15,6 @@
 }
     .nav-link{
         margin:0 20px;
-
     }
     .container2{
       background: rgba(0, 0, 0, 0.5);
@@ -27,3 +26,49 @@
       margin:0 30% 2% 30%;
     }   
 </style>
+<body>
+
+    <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#" style="color: rgb(252, 252, 12); font-size: 1.5rem; font-weight: bold;">Safe Heaven</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Report</a></li>
+          <li class="nav-item"><a class="nav-link" href="resource.html">Resource</a></li>
+          <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container2 mt-5">
+    <h2 class="text-center">Create Your Account</h2>
+    <form id="signup-form" class="mx-auto mt-4" style="max-width: 400px;">
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Create a password" required>
+      </div>
+      <div class="mb-3">
+        <label for="confirm-password" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password" required>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+      <p class="text-center mt-3">
+        Already have an account? <a href="login.html">Login here</a>.
+      </p>
+    </form>
+  </div>
