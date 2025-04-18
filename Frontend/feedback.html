@@ -131,4 +131,27 @@
       </div>
     </div>
   </nav>
-  
+  <div class="feedback-container">
+    <h2>We Value Your Feedback</h2>
+    <p>Your thoughts, suggestions, and experiences help us improve. Please share them below.</p>
+    
+    <!-- Feedback Form -->
+    <div class="feedback-form-container">
+      <form id="feedbackForm">
+        <label for="name">Name (Optional):</label>
+        <input type="text" id="name" name="name" placeholder="Your name (optional)">
+
+        <label for="email">Email (Optional):</label>
+        <input type="email" id="email" name="email" placeholder="Your email (optional)">
+
+        <label for="feedbackType">Feedback Type:</label>
+        <select id="feedbackType" name="feedbackType">
+          <option value="Report an Issue">Report an Issue</option>
+          <option value="Suggestions for Improvement">Suggestions for Improvement</option>
+          <option value="Share an Experience">Share an Experience</option>
+        </select>
+
+        <label for="feedbackMessage">Message/Feedback:</label>
+        <textarea id="feedbackMessage" name="feedbackMessage" placeholder="Please share your thoughts here..."></textarea>
+
+        
