@@ -168,6 +168,17 @@
     </div>
   </div>
 
-  
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Simulate feedback submission
+      setTimeout(() => {
+        document.getElementById('thankYouMessage').style.display = 'block';
+        document.getElementById('feedbackForm').reset();
+      }, 500);
+    });
+  </script>
+
 </body>
 </html>
