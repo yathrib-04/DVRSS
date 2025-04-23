@@ -130,3 +130,30 @@ color: #555;
 line-height: 1.6;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+.about-cols {
+flex-direction: column; /* Stack columns on small screens */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
