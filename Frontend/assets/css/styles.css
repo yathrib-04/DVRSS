@@ -3,10 +3,7 @@ body {
     background: url('../image/home2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter:blur(4px);
-
-
-   
+    backdrop-filter:blur(4px);  
 }
 .nav-link{
     margin:0 20px;
@@ -59,13 +56,11 @@ img {
 padding: 60px 0;
 color: #fff;
 }
-
 .container {
 
     max-width: 1200px; 
     margin: 0 auto; 
     margin-top: 20px;
     margin-bottom: 10px;
-
 }
 
