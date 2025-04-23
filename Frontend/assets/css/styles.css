@@ -136,6 +136,17 @@ line-height: 1.6;
 flex-direction: column; /* Stack columns on small screens */
 }
 
+.about-col {
+width: 100%; /* Full width for smaller screens */
+margin-bottom: 30px; /* Add space between stacked items */
+}
+}
+footer{
+    padding: 20px;
+    background: #555;
+    color: white;
+}
+
 
 
 
