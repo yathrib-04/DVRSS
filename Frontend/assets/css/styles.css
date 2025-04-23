@@ -88,23 +88,45 @@ max-width: 800px;
 margin: 0 auto; 
 }
 
+/* Add box around each column */
+.about-col {
+background-color: #a09696; /* White background for each box */
+border-radius: 8px; /* Rounded corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+padding: 20px;
+text-align: center;
+border: 2px solid #a09696; /* Border around the box */
+}
 
+.about-col .img {
+position: relative;
+margin-bottom: 20px;
+}
 
+.about-col .img img {
+width: 100%;
+height: auto;
+}
 
+.about-col .icon {
+position: absolute;
+top: 10px;
+right: 10px;
+background-color: rgba(0, 0, 0, 0.5);
+color: #fff;
+padding: 10px;
+border-radius: 50%;
+}
 
+.about-col h2 {
+font-size: 1.5em; /* Title size */
+color: #2c3e50;
+margin-bottom: 15px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.about-col p {
+font-size: 1.1em;
+color: #555;
+line-height: 1.6;
+}
 
