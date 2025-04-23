@@ -4,8 +4,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter:blur(4px);
-
-
    
 }
 .nav-link{
@@ -129,13 +127,11 @@ font-size: 1.1em;
 color: #555;
 line-height: 1.6;
 }
-
 /* Responsive Styles */
 @media (max-width: 768px) {
 .about-cols {
 flex-direction: column; /* Stack columns on small screens */
 }
-
 .about-col {
 width: 100%; /* Full width for smaller screens */
 margin-bottom: 30px; /* Add space between stacked items */
