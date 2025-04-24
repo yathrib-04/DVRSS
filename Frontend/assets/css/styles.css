@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('../image/home2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter:blur(4px);
+   
+}
+.nav-link{
+    margin:0 20px;
+
+}
+.hero {
+    display: flex;
+    align-items: center;
+    
+}
+.text-container {
+    text-align: left;
+   margin-top: 150px;
+}
+.text-container h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #f8f9fa;
+    margin-bottom: 20px;
+}
+.text-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #f5f2f2;
+}
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #0056b3;
+}
+.image-container img {
+    max-width: 400px;
+    border-radius: 8px;
+    margin-top: 100px;
+}
+img {
+    width: 273;
+    height:auto;
+}
+/* General Styles */
+.about {
+padding: 60px 0;
+color: #fff;
+}
+
+.container {
+
+    max-width: 1200px; 
+    margin: 0 auto; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
+.section-header {
+text-align: center;
+margin-bottom: 40px;
+}
+
+.section-header .about {
+font-size: 2.5em; 
+color: whitesmoke; 
+margin-bottom: 10px;
+}
+
+.section-header p {
+font-size: 1.2em;
+color:white; 
+line-height: 1.6; 
+max-width: 800px; 
+margin: 0 auto; 
+}
+
+/* Add box around each column */
+.about-col {
+background-color: #a09696; /* White background for each box */
+border-radius: 8px; /* Rounded corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+padding: 20px;
+text-align: center;
+border: 2px solid #a09696; /* Border around the box */
+}
+
+.about-col .img {
+position: relative;
+margin-bottom: 20px;
+}
+
+.about-col .img img {
+width: 100%;
+height: auto;
+}
+
+.about-col .icon {
+position: absolute;
+top: 10px;
+right: 10px;
+background-color: rgba(0, 0, 0, 0.5);
+color: #fff;
+padding: 10px;
+border-radius: 50%;
+}
+
+.about-col h2 {
+font-size: 1.5em; /* Title size */
+color: #2c3e50;
+margin-bottom: 15px;
+}
+
+.about-col p {
+font-size: 1.1em;
+color: #555;
+line-height: 1.6;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+.about-cols {
+flex-direction: column; /* Stack columns on small screens */
+}
+.about-col {
+width: 100%; /* Full width for smaller screens */
+margin-bottom: 30px; /* Add space between stacked items */
+}
+}
+footer{
+    padding: 20px;
+    background: #555;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
