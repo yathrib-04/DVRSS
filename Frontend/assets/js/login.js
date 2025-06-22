@@ -14,10 +14,26 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
   // Simulate login (mock backend response)
   // WARNING: This is a mock login for demonstration purposes only.
   // In a real application, you should use a secure backend for authentication.
-  if (email === "test@example.com" && password === "ValidPassword123!") {
+  if (email === "admin@example.com" && password === "AdminPassword123!") {
+    alert('Admin login successful! Redirecting to admin dashboard...');
+    localStorage.setItem('userRole', 'admin');
+    window.location.href = 'Admin/frontend/index.html'; // Redirect to the admin landing page
+  } else if (email === "test@example.com" && password === "ValidPassword123!") {
     alert('Login successful! Redirecting to dashboard...');
+    localStorage.setItem('userRole', 'user');
     window.location.href = 'dashboard.html'; // Redirect to the dashboard
   } else {
     alert('Invalid email or password. Please try again.');
+  }
+}); 
+
+document.getElementById('toggle-password').addEventListener('click', function () {
+  const passwordInput = document.getElementById('password');
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    this.textContent = 'Hide';
+  } else {
+    passwordInput.type = 'password';
+    this.textContent = 'Show';
   }
 }); 

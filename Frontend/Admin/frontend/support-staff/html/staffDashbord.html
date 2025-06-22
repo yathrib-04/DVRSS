@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Staff Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            background: url('../images/bd-03.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        h4{
+            text-align: center;
+            color: #000000;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .main-title {
+            color: #4DA1A9;
+        }
+
+        .nav-pills .nav-link {
+            cursor: pointer;
+            color: #3c8d94;
+        }
+        .nav-pills .nav-link.active{
+            color: #fff;
+            background-color: #4DA1A9;
+        }
+        .btn-green {
+            background-color: #4DA1A9;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container glass-effect">
+        <div class="text-center mb-4">
+            <h1 class="main-title">Support Staff Dashboard</h1>
+            <p>Manage incident reports and access resources to provide immediate assistance.</p>
+        </div>
+        <nav class="nav nav-pills nav-fill">
+            <a class="nav-link active" data-toggle="tab" onclick="showSection('incident-reports')">Incident Reports</a>
+            <a class="nav-link" data-toggle="tab" onclick="showSection('resource-access')">Resource Access</a>
+            <a class="nav-link" data-toggle="tab" onclick="showSection('supportProgress')">Support Progress</a>
+            <a class="nav-link" data-toggle="tab" onclick="showSection('feedback')">Feedback</a>
+        </nav>
+        <div id="content" class="mt-4">
+            <!-- Incident Reports Section -->
+            <div id="incident-reports" class="tab-content">
+                <h4>Incident Reports</h4>
+                <p>Here you can view and manage incident reports.</p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Incident ID</th>
+                            <th>Victim ID</th>
+                            <th>Report Date</th>
+                            <th>Location</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="incident-reports-table-body">
+                        <!-- Incident reports will be dynamically loaded here -->
+                    </tbody>
+                </table>
+            </div>
+            <!-- Resource Access Section -->
+            <div id="resource-access" class="tab-content" style="display:none;">
+                <h4>Resource Access</h4>
+                <p>Access resources and documents relevant to case management.</p>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="resource1.pdf" target="_blank">Resource 1</a></li>
+                    <li class="list-group-item"><a href="resource2.pdf" target="_blank">Resource 2</a></li>
+                    <!-- Add more resources as needed -->
+                </ul>
+            </div>
+            <!-- Support Progress Section (Updated) -->
+            <div id="supportProgress" class="tab-content" style="display:none;">
+                <h4>Incident Details</h4>
+                <p>Details of the incidents including support requests.</p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Incident ID</th>
+                            <th>Victim ID</th>
+                            <th>Report Date</th>
+                            <th>Support Requested</th>
+                            <th>Status</th>
+                        </tr>
+                </thead>
+                <tbody id="incident-details-table-body">
+            <!-- Incident details will be dynamically loaded here -->
+                </tbody>
+                </table>
+            </div>
+
+            <!-- Feedback Section -->
+            <div id="feedback" class="tab-content" style="display:none;">
+                <h4>Feedback</h4>
+                <p>Your feedback helps us improve the system.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="feedbackType">Feedback Type</label>
+                        <select class="form-control" id="feedbackType">
+                            <option>Bug Report</option>
+                            <option>Feature Request</option>
+                            <option>General Feedback</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackDescription">Description</label>
+                        <textarea class="form-control" id="feedbackDescription" rows="3" placeholder="Enter Description"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-green">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.tab-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+            // Update the active link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector(`[onclick="showSection('${sectionId}')"]`).classList.add('active');
+        }
+
+        // Example function to load incident reports (you would replace this with actual data fetching)
+        function loadIncidentReports() {
+            const incidentReportsTableBody = document.getElementById('incident-reports-table-body');
+            incidentReportsTableBody.innerHTML = `
+                <tr>
+                    <td>001</td>
+                    <td>V001</td>
+                    <td>2023-05-20</td>
+                    <td>Addis Ababa</td>
+                    <td>Physical assault reported by neighbor</td>
+                    <td>New</td>
+                </tr>
+                <!-- More rows as needed -->
+            `;
+        }
+        function loadIncidentDetails() {
+            const incidentDetailsTableBody = document.getElementById('incident-details-table-body');
+            incidentDetailsTableBody.innerHTML = `
+                <tr>
+                    <td>001</td>
+                    <td>V001</td>
+                    <td>2023-05-20</td>
+                    <td>Counseling support requested</td>
+                    <td>In Progress</td>
+                </tr>
+                <!-- More rows as needed -->
+            `;
+        }
+
+// Call the function to load incident details when the page loads
+document.addEventListener('DOMContentLoaded', loadIncidentDetails);
+
+
+        // Call the function to load incident reports when the page loads
+        document.addEventListener('DOMContentLoaded', loadIncidentReports);
+    </script>
+</body>
+</html>

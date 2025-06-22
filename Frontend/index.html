@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domestic Violence Reporting and Support System</title>
+    <link rel="icon" href="assets/image/flower.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -30,11 +32,11 @@
     <div class="container">
         <div class="row">
             <!-- Left Content -->
-            <div class="col-md-6 image-container">
-                <img src="./assets/image/heaven.jpg" alt="Support Illustration">
+            <div class="col-md-6 image-container" data-aos="fade-right">
+                <img src="./assets/image/heaven.jpg" alt="A hopeful black and white sketch of a smiling child, representing a brighter future.">
             </div>
                         <!-- Right Content -->
-            <div class="col-md-6 text-container">
+            <div class="col-md-6 text-container" data-aos="fade-left">
                 <h1>Welcome to the Domestic Violence Reporting and Support System</h1>
                 <p>If you or someone you know is experiencing domestic violence, please don't hesitate to reach out. We're here to help.</p>
                 <a href="login.html" class="button">SIGN UP</a>
@@ -44,16 +46,16 @@
 </div>
 <!-- about-->
 <section id="about">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
       <header class="section-header">
         <h3 class="about">About Us</h3>
         <p>Our institution is made by a group of girls who are very concerned in problems in their community and who have taken the will to solve it. We are a non-profit organization built up to stop gender based violence(GBV). Having witnessed many lives being ruined because of 1 moment in their life, we coudn't keep silent and watch while it keeps happening.</p>
       </header>
       <div class="row about-cols">
-        <div class="col-md-4 wow fadeInUp">
+        <div class="col-md-4 wow fadeInUp" data-aos="fade-up" data-aos-delay="100">
           <div class="about-col">
             <div class="img">
-              <img src="./assets/image/mission.jpg" alt="" class="img-fluid">
+              <img src="./assets/image/mission.jpg" alt="A person looking at a dartboard, symbolizing a clear mission and focus." class="img-fluid">
               <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
             </div>
             <h2 class="title">Our Mission</h2>
@@ -62,10 +64,10 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="col-md-4 wow fadeInUp" data-aos="fade-up" data-aos-delay="200">
           <div class="about-col">
             <div class="img">
-              <img src="./assets/image/plan.jpg" alt="" class="img-fluid">
+              <img src="./assets/image/plan.jpg" alt="A hand drawing a strategic plan on a whiteboard, representing careful planning." class="img-fluid">
               <div class="icon"><i class="ion-ios-list-outline"></i></div>
             </div>
             <h2 class="title">Our Plan</h2>
@@ -74,10 +76,10 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="col-md-4 wow fadeInUp" data-aos="fade-up" data-aos-delay="300">
           <div class="about-col">
             <div class="img">
-              <img src="./assets/image/vission.jpg" alt="" class="img-fluid">
+              <img src="./assets/image/vission.jpg" alt="A person looking through binoculars, symbolizing a forward-looking vision." class="img-fluid">
               <div class="icon"><i class="ion-ios-eye-outline"></i></div>
             </div>
             <h2 class="title">Our Vision</h2>
@@ -96,10 +98,34 @@
         <p>&copy; 2024 Domestic Violence Reporting and Support System. All Rights Reserved.</p>
     </div>
 </footer>
+
+<a id="back-to-top" href="#" class="back-to-top-btn" role="button" title="Back to Top">↑</a>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+
+  // Back to Top Button Logic
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('#back-to-top').fadeIn();
+    } else {
+      $('#back-to-top').fadeOut();
+    }
+  });
+
+  $('#back-to-top').click(function() {
+    $('html, body').animate({scrollTop : 0}, 600);
+    return false;
+  });
+</script>
 </body>
 </html>
 

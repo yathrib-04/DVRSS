@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Landing Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS */
+        body {
+            background: url('bg-02.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        p{
+            color: #fff;
+        }
+        .glass-effect {
+            background: rgba(0, 0, 0, 0.3); /* Semi-transparent white */
+            backdrop-filter: blur(10px); /* Blur effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow */
+            border-radius: 10px; /* Optional: Rounded corners */
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        .card {
+            margin-bottom: 30px;
+            background: rgba(0, 0, 0, 0.1); /* Semi-transparent white */
+            backdrop-filter: blur(10px); /* Blur effect */
+        }
+
+        .card-title {
+            font-size: 1.7rem;
+            color: #ffffff;
+        }
+        .card-text{
+            color: #99a1a5;
+        }
+
+        .btn-custom {
+            background-color: #007bff;
+            color: #fff;
+            width: 80%;
+            
+        }
+        .btn-green{
+            background-color:#31767c ;
+            color: #fff;
+            width: 80%;
+            
+        }
+        .main-title{
+            color: #fdfafa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container glass-effect">
+        <div class="text-center mb-4">
+            <h1 class="main-title">Admin Access</h1>
+            <p>Please select your role to continue</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card glass-effect">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="color: #007bff;">Women and Child Office</h5>
+                        <p class="card-text">Empower and protect, for every action matters</p>
+                        <a href="Women and Child Office/login-page.html" class="btn btn-custom">Enter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card glass-effect">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="color: #31767c;">Support Staff</h5>
+                        <p class="card-text">Be the change you want to see in the world!!</p>
+                        <a href="support-staff/login-page.html" class="btn btn-green">Enter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

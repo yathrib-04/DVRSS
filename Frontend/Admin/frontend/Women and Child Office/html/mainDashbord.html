@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women and Child Office Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('../images/bd-01.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        p{
+            color: #000000;
+            font-size: 18px;
+        }
+        h6{
+            font-size: 28px;
+            color: #ffffff;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .main-title {
+            color: #3c84d6;
+        }
+
+        .nav-link {
+            cursor: pointer;
+        }
+        .btn-green{
+            background-color: rgb(30, 64, 179);
+            color: white;
+        }
+        .title-style{
+            text-align: center;
+            font-size: 32px;
+            color: #ffffff;
+            font-style: unset;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container glass-effect">
+        <div class="text-center mb-4">
+            <h1 class="main-title">Women and Child Office Dashboard</h1>
+            <h6>Empowering justice, one case at a time.</h6>
+        </div>
+        <nav class="nav nav-pills nav-fill">
+            <a class="nav-link active" data-toggle="tab" onclick="showSection('access-reports')">Access Reports</a>
+            <a class="nav-link" data-toggle="tab" onclick="showSection('update-case-status')">Update Case Status</a>
+            <a class="nav-link" data-toggle="tab" onclick="showSection('pending-progress-cases')">Pending/Progress Cases</a>
+            <a class="nav-link" data-toggle="tab" onclick="showSection('closed-cases')">Closed Cases</a>
+            <a class="nav-link" data-toggle="tab" onclick="showSection('feedback')">Feedback</a>
+        </nav>
+        <div id="content" class="mt-4">
+            <!-- Access Reports Section -->
+            <div id="access-reports" class="tab-content">
+                <h4 class="title-style">Reports Section</h4>
+                <p>Here you can access reports relevant to ongoing investigations.</p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Case ID</th>
+                            <th>Victim ID</th>
+                            <th>Report Date</th>
+                            <th>Location</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            
+                        </tr>
+                    </thead>
+                
+                    <tbody id="new-cases-table-body">
+                        <!-- Reports will be dynamically loaded here -->
+                    </tbody>
+                </table>
+            </div>
+            <!-- Update Case Status Section -->
+            <div id="update-case-status" class="tab-content" style="display:none;">
+                <h4 class="title-style">Updated Case Status</h4>
+                <p>Update the status of cases as necessary.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="caseId">Case ID</label>
+                        <input type="text" class="form-control" id="caseId" placeholder="Enter Case ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="victimId">Victim ID</label>
+                        <input type="text" class="form-control" id="victimId" placeholder="Enter Victim ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="reportDate">Report Date</label>
+                        <input type="date" class="form-control" id="reportDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" class="form-control" id="location" placeholder="Enter Location">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" rows="3" placeholder="Enter Description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="caseStatus">Status</label>
+                        <select class="form-control" id="caseStatus">
+                            <option>In Progress</option>
+                            <option>Closed</option>
+                            <option>Pending</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-green">Update Status</button>
+                </form>
+            </div>
+            <!-- Pending/Progress Cases Section -->
+            <div id="pending-progress-cases" class="tab-content" style="display:none;">
+                <h4 class="title-style">Pending/Progress Cases</h4>
+                <p>Here you can view and manage cases that are pending or in progress.</p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Case ID</th>
+                            <th>Victim ID</th>
+                            <th>Report Date</th>
+                            <th>Location</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pending-progress-cases-table-body">
+                        <!-- Pending/Progress cases will be dynamically loaded here -->
+                    </tbody>
+                </table>
+            </div>
+            <!-- Closed Cases Section -->
+            <div id="closed-cases" class="tab-content" style="display:none;">
+                <h4 class="title-style">Closed Cases</h4>
+                <p>Here you can review all closed cases.</p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Case ID</th>
+                            <th>Victim ID</th>
+                            <th>Closure Date</th>
+                            <th>Outcome</th>
+                            <th>Details</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="closed-cases-table-body">
+                        <!-- Closed cases will be dynamically loaded here -->
+                    </tbody>
+                </table>
+            </div>
+            <!-- feedback -->
+            <div id="feedback" class="tab-content" style="display:none;"> 
+                <h4 class="title-style">Feedback</h4> 
+                <p>Your feedback helps us improve the system.</p> 
+                <form> 
+                    <div class="form-group"> 
+                        <label for="feedbackType">Feedback Type</label> 
+                        <select class="form-control" id="feedbackType"> 
+                            <option>Bug Report</option> 
+                            <option>Feature Request</option> 
+                            <option>General Feedback</option> 
+                        </select> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label for="feedbackDescription">Description</label> 
+                        <textarea class="form-control" id="feedbackDescription" rows="3" placeholder="Enter Description"></textarea> 
+                    </div> 
+                    <button type="submit" class="btn btn-green">Submit Feedback</button> 
+                </form> 
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script> 
+        function showSection(sectionId) { 
+            document.querySelectorAll('.tab-content').forEach(section => { 
+                section.style.display = 'none';
+            });  
+            document.getElementById(sectionId).style.display = 'block';  
+            document.querySelectorAll('.nav-link').forEach(link => { 
+                link.classList.remove('active'); 
+            }); 
+            document.querySelector(`[onclick="showSection('${sectionId}')"]`).classList.add('active'); 
+        } 
+        function showSection(sectionId) {  
+            document.querySelectorAll('.tab-content').forEach(section => { 
+                section.style.display = 'none'; 
+            });  
+            document.getElementById(sectionId).style.display = 'block'; 
+            document.querySelectorAll('.nav-link').forEach(link => { 
+                link.classList.remove('active'); 
+            }); 
+            document.querySelector(`[onclick="showSection('${sectionId}')"]`).classList.add('active'); 
+        } 
+        // Example function to load cases (you would replace this with actual data fetching) 
+        function loadNewCases() { 
+            const newCasesTableBody = document.getElementById('new-cases-table-body'); 
+            newCasesTableBody.innerHTML = ` 
+                <tr> 
+                    <td>001</td> 
+                    <td>V001</td> 
+                    <td>2023-05-20</td> 
+                    <td>Addis Ababa</td> 
+                    <td>Physical assault reported by neighbor</td> 
+                    <td>New</td> 
+                     
+                </tr> 
+            `; 
+        } 
+        function loadPendingProgressCases() { 
+            const pendingProgressCasesTableBody = document.getElementById('pending-progress-cases-table-body'); 
+            pendingProgressCasesTableBody.innerHTML = ` 
+                <tr> 
+                    <td>002</td> 
+                    <td>V002</td> 
+                    <td>2023-05-22</td> 
+                    <td>Bahirdar</td> 
+                    <td>Verbal abuse reported by victim</td> 
+                    <td>In Progress</td> 
+                     
+                </tr> 
+            `; 
+        } 
+        function loadClosedCases() { 
+            const closedCasesTableBody = document.getElementById('closed-cases-table-body'); 
+            closedCasesTableBody.innerHTML = ` 
+                    <tr> 
+                        <td>003</td> 
+                        <td>V003</td> 
+                        <td>2023-04-18</td> 
+                        <td>Hawassa</td> 
+                        <td>Domestic violence case resolved</td> 
+                        <td>Closed</td> 
+                         
+                    </tr> 
+            `; 
+        } 
+        document.addEventListener('DOMContentLoaded', () => { 
+            loadNewCases(); 
+            loadPendingProgressCases(); 
+            loadClosedCases(); 
+        });
+    </script>
+</body>
+</html>        

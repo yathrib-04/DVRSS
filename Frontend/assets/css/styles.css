@@ -6,6 +6,12 @@ body {
     backdrop-filter:blur(4px);
    
 }
+
+.home-body {
+    background: linear-gradient(to right, #f3eef7, #e5ddea);
+    backdrop-filter: none;
+}
+
 .nav-link{
     margin:0 20px;
 
@@ -141,6 +147,31 @@ footer{
     padding: 20px;
     background: #555;
     color: white;
+}
+
+/* Back to Top Button */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+}
+
+.back-to-top-btn:hover {
+    background: #0056b3;
+    color: #fff;
+    text-decoration: none;
 }
 
 

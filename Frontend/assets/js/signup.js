@@ -19,7 +19,7 @@ document.getElementById('signup-form').addEventListener('submit', function (e) {
   // Password strength validation
   const isValidPassword = password.length >= 8 &&
                               /[A-Za-z]/.test(password) &&
-                              /\\d/.test(password) &&
+                              /\d/.test(password) &&
                               /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
   if (!isValidPassword) {
@@ -33,4 +33,26 @@ document.getElementById('signup-form').addEventListener('submit', function (e) {
   console.log('Form submitted successfully:', { name, email, password });
   alert('Sign-Up Successful! Redirecting to Dashboard...');
   window.location.href = 'dashboard.html';
+}); 
+
+document.getElementById('toggle-password').addEventListener('click', function () {
+  const passwordInput = document.getElementById('password');
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    this.textContent = 'Hide';
+  } else {
+    passwordInput.type = 'password';
+    this.textContent = 'Show';
+  }
+});
+
+document.getElementById('toggle-confirm-password').addEventListener('click', function () {
+  const confirmPasswordInput = document.getElementById('confirm-password');
+  if (confirmPasswordInput.type === 'password') {
+    confirmPasswordInput.type = 'text';
+    this.textContent = 'Hide';
+  } else {
+    confirmPasswordInput.type = 'password';
+    this.textContent = 'Show';
+  }
 }); 

@@ -8,4 +8,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if (userNameElement) {
         userNameElement.textContent = userName;
     }
+
+    const userRole = localStorage.getItem('userRole');
+    if (userRole === 'admin') {
+        const adminLinkContainer = document.getElementById('admin-link-container');
+        if (adminLinkContainer) {
+            adminLinkContainer.style.display = 'block';
+        }
+    }
 }); 
