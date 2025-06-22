@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('../image/image7.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #a8a2a2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 10px;
+  color: #8d8888;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin:0 30% 2% 30%;
+}
+
+h1 {
+    font-size: 24px;
+    color:white;
+    text-align: center;
+}
+
+label {
+    font-size: 16px;
+    color:white;
+}
+
+textarea, input[type="text"], input[type="date"], input[type="file"], input[type="tel"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    margin-top: 5px;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="date"]:focus, input[type="file"]:focus, input[type="tel"]:focus, input[type="email"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.form-check-label {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.mb-3 {
+    margin-bottom: 20px;
+} 

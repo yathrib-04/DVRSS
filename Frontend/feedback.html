@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,123 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feedback - Domestic Violence Reporting and Support System</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-image: url(./assets/image/home2.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      margin: 0;
-      padding: 0;
-      color: #fff;
-    }
-    .nav-link{
-        margin:0 20px;
-    
-    }
-    .feedback-container {
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 30px;
-      background-color: #ffffff;
-      border-radius: 15px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
-
-    h2 {
-      color: #4CAF50;
-      text-align: center;
-      font-size: 28px;
-    }
-
-    p {
-      text-align: center;
-      font-size: 16px;
-      color: #555;
-    }
-
-    form label {
-      font-size: 16px;
-      color: #333;
-      margin-top: 20px;
-      display: block;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 8px;
-      border: 2px solid #ddd;
-      box-sizing: border-box;
-      font-size: 16px;
-      color: #333;
-    }
-
-    input:focus, textarea:focus, select:focus {
-      border-color: #4CAF50;
-      outline: none;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 150px;
-    }
-
-    .form-actions {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    button {
-      padding: 12px 25px;
-      background-color: #4CAF50;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      width: 48%;
-      font-size: 16px;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    button[type="button"] {
-      background-color: #ddd;
-    }
-
-    #thankYouMessage {
-      text-align: center;
-      font-size: 18px;
-      color: #4CAF50;
-      font-weight: bold;
-      display: none;
-    }
-
-    .feedback-form-container {
-      background-color: #f7f7f7;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/feedback.css">
 </head>
 <body>
     <!-- Navigation (untouched) -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="#" style="color: rgb(252, 252, 12); font-size: 1.5rem; font-weight: bold;">Safe Heaven</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="login.html">Report</a></li>
           <li class="nav-item"><a class="nav-link" href="resource.html">Resource</a></li>
           <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
@@ -157,7 +54,7 @@
         <!-- Submit & Cancel Buttons -->
         <div class="form-actions">
           <button type="submit">Submit Feedback</button>
-          <button type="button" onclick="window.location.href='/home';">Cancel</button>
+          <button type="button" onclick="window.location.href='index.html';">Cancel</button>
         </div>
       </form>
     </div>
@@ -168,17 +65,9 @@
     </div>
   </div>
 
-  <script>
-    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      // Simulate feedback submission
-      setTimeout(() => {
-        document.getElementById('thankYouMessage').style.display = 'block';
-        document.getElementById('feedbackForm').reset();
-      }, 500);
-    });
-  </script>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="assets/js/feedback.js"></script>
 </body>
 </html>

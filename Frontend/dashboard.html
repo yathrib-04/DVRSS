@@ -1,50 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Dashboard</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
 </head>
-<style>
-    body{
-      background-image: url(./assets/image/home1.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    /* Styling for the large content box */
-  .content-box {
-    border: 2px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: wheat;
-  }
-  
-  /* Styling for the description boxes */
-  .description-box {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .mt-5 {
-    margin-top: 3rem;
-  }
-  
-  .mb-3 {
-    margin-bottom: 1rem;
-  }
-  
-      .nav-link{
-          margin:0 20px;
-      }   
-  </style>
-  <body>
+<body>
     <!-- Navigation -->
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
    <div class="container">
@@ -55,7 +19,7 @@
      <div class="collapse navbar-collapse" id="navbarNav">
        <ul class="navbar-nav ms-auto">
          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+         <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
          <li class="nav-item"><a class="nav-link" href="login.html">Report</a></li>
          <li class="nav-item"><a class="nav-link" href="resource.html">Resource</a></li>
          <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
@@ -65,8 +29,8 @@
  </nav>
  <div class="container mt-5">
    <div class="content-box">
-      <h1 class="text-center">Welcome Dear user </h1>
-       <p class="text-center">What would you like to do?</p>"
+      <h1 class="text-center">Welcome, <span id="user-name">User</span>!</h1>
+       <p class="text-center">What would you like to do?</p>
        <div class="row mt-4">
            <div class="col-md-4">
                <div class="description-box p-3 mb-3 border rounded">
@@ -88,12 +52,15 @@
            </div>
        </div>
        <div class="text-center mt-5">
-           <a href="logout.html" class="btn btn-danger">Logout</a>
+           <a href="index.html" class="btn btn-danger">Logout</a>
        </div>
    </div>
 </div>
 
  </div>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <script src="assets/js/dashboard.js"></script>
 </body>
 </html>
