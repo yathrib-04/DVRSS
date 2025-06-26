@@ -63,4 +63,4 @@ Once the application is open, you can:
 
 ---
 
-Thank you for checking out the DVRSS project!
+
